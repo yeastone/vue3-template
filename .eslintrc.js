@@ -20,7 +20,8 @@ module.exports = defineConfig({
    'plugin:vue/vue3-recommended',
    'standard',
    'prettier',
-   'plugin:prettier/recommended'
+   'plugin:prettier/recommended',
+   "@vue/eslint-config-typescript"
    ],
   parserOptions: {
    // js的版本

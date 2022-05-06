@@ -1,4 +1,3 @@
-import { createRenderer } from 'vue'
 import {
   createRouter,
   createWebHashHistory
@@ -8,24 +7,24 @@ const routes = [
   {
     path: "/login",
     name: "login",
-    component: () => import('../pages/account/login.vue')
+    component: () => import('@/views/login/index.vue')
   },
   {
     path:'/',
-    component: () => import('../pages/index.vue'),
+    component: () => import('@/views/index.vue'),
     redirect:'/login',
     children:[
       {
         path:'/dashboard',
         name: 'dashboard',
-        component: ()=> import('../pages/dashboard/index.vue')
+        component: ()=> import('@/views/dashboard/index.vue')
       }
     ]
   },
   {
     path: '/:pathMatch(.*)*',
     name:'notFound',
-    component: ()=> import('../pages/landingPage/notFound.vue')
+    component: ()=> import('@/views/landingPage/not_found.vue')
   }
 ]
 
